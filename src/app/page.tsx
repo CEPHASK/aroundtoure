@@ -1,10 +1,12 @@
-import { Button } from "@/components/ui/button";
+import { HeroCarousel } from "@/components/HeroCarousel";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Aroundtoure</h1>
-      <Button>Click me</Button>
-    </div>
+    <main>
+      <h1 className="text-center font-extrabold">Aroundtoure</h1>
+      <section className="py-2 mx-0 ">
+        <HeroCarousel />
+      </section>
+    </main>
   );
 }
