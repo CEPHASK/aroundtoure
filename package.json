@@ -1,9 +1,9 @@
 {
-  "name": "aroundtoure-blog",
+  "name": "aroundtoure",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -13,10 +13,13 @@
     "@radix-ui/react-slot": "^1.1.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "contentlayer": "^0.3.4",
+    "date-fns": "^4.1.0",
     "embla-carousel-autoplay": "^8.5.1",
     "embla-carousel-react": "^8.5.1",
     "lucide-react": "^0.469.0",
     "next": "15.1.3",
+    "next-contentlayer": "^0.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^2.6.0",
