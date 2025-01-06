@@ -1,5 +1,6 @@
 import FeaturedPosts from "@/components/FeaturedPosts";
 import HomeCoverSection from "@/components/HomeCoverSection";
+import RecentPosts from "@/components/RecentPosts";
 import { allBlogs } from "contentlayer/generated";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
     <main>
       <HomeCoverSection blogs={allBlogs} />
       <FeaturedPosts blogs={allBlogs} />
+      <RecentPosts blogs={allBlogs} />
     </main>
   );
 }
