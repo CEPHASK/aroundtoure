@@ -12,8 +12,9 @@ const BlogLayoutOne = ({ blog }) => {
         placeholder="blur"
         blurDataURL={blog.image.blurhashDataUrl}
         alt={blog.title}
-        width={blog.image.width}
-        height={blog.image.height}
+        fill
+        // width={blog.image.width}
+        // height={blog.image.height}
         className="w-full h-full object-center object-cover rounded-xl group-hover:scale-105 transition-all ease duration-300"
         // sizes="(max-width: 1180px) 100vw, 50vw"
       />
