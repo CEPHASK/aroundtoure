@@ -1,4 +1,5 @@
 import { makeSource, defineDocumentType } from '@contentlayer/source-files'
+import readingTime from 'reading-time';
 
 const Blog = defineDocumentType(() => ({
     name: 'Blog',
@@ -39,7 +40,11 @@ const Blog = defineDocumentType(() => ({
     computedFields: {
         url: {
           type: 'string',
-          resolve: (doc) => `/blogs/${doc._raw.flattenedPath}`
+          resolve: (doc) => `/blog/${doc._raw.flattenedPath}`
+        },
+        readingTime: {
+          type: "json",
+          resolve: (doc) => readingTime(doc.body.raw)
         },
     },
   }))
