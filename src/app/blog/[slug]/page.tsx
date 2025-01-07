@@ -4,7 +4,9 @@ import { allBlogs } from "contentlayer/generated";
 import Image from "next/image";
 
 export default function BlogPage({ params }) {
-  const blog = allBlogs.find((blog) => blog._raw.flattenedPath === params.slug);
+  const blog: Blog | undefined = allBlogs.find(
+    (blog) => blog._raw.flattenedPath === params.slug
+  );
 
   // const slug = (await params).slug;
 
