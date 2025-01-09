@@ -4,6 +4,7 @@ import readingTime from 'reading-time';
 const Blog = defineDocumentType(() => ({
     name: 'Blog',
     filePathPattern: '**/**/*.mdx',
+    contentType: 'mdx',
     fields: {
       title: {
         type: 'string',
