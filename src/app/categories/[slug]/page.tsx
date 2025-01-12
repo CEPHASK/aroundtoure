@@ -1,3 +1,4 @@
+import Categories from "@/components/Categories";
 import { allBlogs } from "contentlayer/generated";
 import { slug } from "github-slugger";
 
@@ -15,7 +16,16 @@ const CategoryPage = ({ params }) => {
       return slugified === params.slug;
     });
   });
-  return <div>Category Name: {params.slug}</div>;
+  return (
+    <article>
+      <div>
+        <h1>#{params.slug}</h1>
+        <span>Discover more categories and expand your knowledge!</span>
+      </div>
+
+      <Categories categories={allCategories} currentSlug={params.slug} />
+    </article>
+  );
 };
 
 export default CategoryPage;
