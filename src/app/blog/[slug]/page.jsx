@@ -43,7 +43,9 @@ export default function BlogPage({ params }) {
       <BlogDetails blog={blog} slug={params.slug} />
 
       <div className="grid grid-cols-12  gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
-        <div>TOC</div>
+        {/* Table of Contents
+        <div>TOC</div>  */}
+
         <RenderMdx blog={blog} />
       </div>
     </article>
