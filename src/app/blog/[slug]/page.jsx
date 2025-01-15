@@ -26,6 +26,9 @@ export default function BlogPage({ params }) {
           <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl !leading-normal relative w-5/6">
             {blog.title}
           </h1>
+          <p className="text-light sm:inline-block mt-4 md:text-lg lg:text-xl">
+            {blog.description}
+          </p>
         </div>
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60 dark:bg-dark/40" />
         <Image
@@ -45,7 +48,7 @@ export default function BlogPage({ params }) {
       {/* create an altenative to blog details and upper section */}
       {/* <BlogInfo blog={blog} /> */}
 
-      <div className="grid grid-cols-12  gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
+      <div className="flex mt-8 px-8 md:px-6 justify-center">
         {/* Table of Contents
         <div>TOC</div>  */}
 
