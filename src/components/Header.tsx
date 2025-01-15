@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { navItems } from "@/constants";
+import Logo from "../../public/aroundtoure-logo.png";
+import Image from "next/image";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +33,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="text-xl font-bold text-white sm:text-2xl">
-              Logo
+              <Image src={Logo} alt="logo" width={40} priority />
             </Link>
           </div>
           <nav className="hidden md:flex items-center space-x-4">
@@ -44,8 +46,11 @@ export function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[240px] sm:w-[300px]">
-              <nav className="flex flex-col space-y-4 mt-6">
+            <SheetContent
+              side="right"
+              className="w-[200px] sm:w-[300px] bg-black"
+            >
+              <nav className="flex flex-col space-y-4 mt-6 text-white">
                 <NavItems />
               </nav>
             </SheetContent>
