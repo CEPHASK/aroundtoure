@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
+import siteMetadata from "../lib/siteMetaData";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,39 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aroundtoure",
-  description: "Aroundtoure: A World Tour",
+  metadataBase: new URL(siteMetadata.siteUrl),
+  title: {
+    template: `%s | ${siteMetadata.title}`,
+    default: siteMetadata.title, // a default is required when creating a template
+  },
+  description: siteMetadata.description,
+  openGraph: {
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    url: siteMetadata.siteUrl,
+    // maybe change (siteName: siteMetadata.headerTitle)
+    siteName: siteMetadata.title,
+    // images: [siteMetadata.socialBanner],
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteMetadata.title,
+    // images: [siteMetadata.socialBanner],
+  },
 };
 
 export default function RootLayout({
