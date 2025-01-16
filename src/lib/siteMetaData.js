@@ -1,4 +1,4 @@
-const siteMetadata = {
+const siteMetaData = {
     title: 'Aroundtoure',
     author: 'Aroundtoure',
     headerTitle: 'Aroundtoure Publication',
@@ -18,4 +18,4 @@ const siteMetadata = {
     locale: 'en-US',
   }
   
-  module.exports = siteMetadata
+  module.exports = siteMetaData
