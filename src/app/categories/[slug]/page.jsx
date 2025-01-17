@@ -24,6 +24,15 @@ export async function generateStaticParams() {
   return paths;
 }
 
+export async function generateMetadata({ params }) {
+  return {
+    title: `${params.slug.replaceAll("-", " ")} Blog`,
+    description: `Learn more about ${
+      params.slug === "all" ? "destinations" : params.slug
+    } through our collection of travel guides`,
+  };
+}
+
 const CategoryPage = ({ params }) => {
   const allCategories = ["all"];
   const blogs = allBlogs.filter((blog) => {
