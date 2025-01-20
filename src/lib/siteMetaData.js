@@ -1,11 +1,11 @@
-const siteMetaData = {
+const siteMetadata = {
     title: 'Aroundtoure',
     author: 'Aroundtoure',
     headerTitle: 'Aroundtoure Publication',
     description: 'A World Tour',
     language: 'en-us',
     theme: 'system', // system, dark or light
-    siteUrl: 'https://aroundtoure.vercel.app', // your website URL
+    siteUrl: 'https://aroundtoure.com', // your website URL
     siteLogo: '/aroundtoure-logo.png',
     // socialBanner: '/social-banner.png', // add social banner in the public folder
     email: 'ckbiz123@gmail.com', 
@@ -18,4 +18,4 @@ const siteMetaData = {
     locale: 'en-US',
   }
   
-  module.exports = siteMetaData
+  module.exports = siteMetadata
